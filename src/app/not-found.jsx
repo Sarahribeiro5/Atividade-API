@@ -1,5 +1,6 @@
-"use client"
-import Link from 'next/link'
+"use client";
+
+import Link from 'next/link';
 
 export default function NotFound() {
   return (
@@ -8,11 +9,9 @@ export default function NotFound() {
       <p className="text-lg text-gray-700 mb-8">
         O conteúdo que você está procurando não existe ou foi removido.
       </p>
-      <Link href="/">
-        <a className="bg-blue-500 text-white px-6 py-3 rounded text-lg hover:bg-blue-600">
-          Voltar para a Home
-        </a>
+      <Link href="/" className="bg-blue-500 text-white px-6 py-3 rounded text-lg hover:bg-blue-600">
+        Voltar para a Home
       </Link>
     </div>
-  )
+  );
 }

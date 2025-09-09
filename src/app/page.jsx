@@ -3,6 +3,7 @@ import React from 'react'
 import Image from 'next/image'
 import { useState } from 'react'
 import axios from 'axios'
+import Link from 'next/link'
 
 export default function Page() {
   const [personagens, setPersonagens] = useState([])
@@ -31,7 +32,7 @@ export default function Page() {
         <h3 className="text-xl mb-4">Aluno: Sarah Ribeiro Barros</h3>
         <div className="flex justify-center mb-4">
           <Image
-            src="/avatar.jpg" 
+            src="/avatar.jpg"
             alt="Foto do Aluno"
             width={150}
             height={150}
@@ -47,6 +48,8 @@ export default function Page() {
           {loading ? "Carregando..." : "Buscar Personagens"}
         </button>
       </div>
+
+      <Link href="./Lista">Lista</Link>
 
       {/* Lista de personagens */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
